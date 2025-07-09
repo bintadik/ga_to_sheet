@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GA4 to Google Sheet Reporter
 
 ## Description
@@ -73,3 +74,6 @@ graph TD
     M --> O[End];
     N --> O;
 ```
+=======
+# ga_to_sheet
+>>>>>>> 12dab34de10802ffb3dbba48b90dc10a162804c5
