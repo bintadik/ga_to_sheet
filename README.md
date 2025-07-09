@@ -18,19 +18,16 @@ The core functionality involves fetching report data from Google Analytics 4 and
 
 ```mermaid
 graph TD
-    A[Start Script Execution] --> B(Load Configuration & Credentials);
-    B --> C{Authenticate with Google APIs};
-    C -- Credentials --> D[Google Analytics Data API (GA4)];
-    C -- Credentials --> E[Google Sheets API];
-    D -- Query Parameters --> F[Request GA4 Report Data];
-    F -- Raw Response --> G{Process GA4 Response
-    (response_to_dataframe)};
-    G -- Pandas DataFrame --> H[Prepare Data for GSheet];
-    H --> I[Clear Existing GSheet Data
-    (clear_report/clear_report_range)];
-    I --> J[Update GSheet Worksheet
-    (update_report)];
-    J --> K(Script Completion);
+    A[Start Script Execution] --> B[Load Config & Credentials]
+    B --> C{Authenticate with Google APIs}
+    C --> D[GA4 Data API]
+    C --> E[Google Sheets API]
+    D --> F[Request GA4 Report Data]
+    F --> G{Process GA4 Response}
+    G --> H[Prepare Data for GSheet]
+    H --> I[Clear GSheet Data]
+    I --> J[Update GSheet Worksheet]
+    J --> K[Script Completion]
 ```
 
 ## File Breakdown
